@@ -1,0 +1,12 @@
+{
+  "name": "@quantum-sec/package-azure-key-vault",
+  "version": "0.0.0-development",
+  "private": true,
+  "description": "Contains modules for deploying and managing Azure Key Vault infrastructure.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:quantum-sec/package-azure-key-vault.git"
+  },
+  "author": "Quantum Security Pte. Ltd.",
+  "license": "SEE LICENSE IN LICENSE"
+}
