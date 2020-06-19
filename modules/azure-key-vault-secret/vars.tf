@@ -6,7 +6,6 @@ variable "name" {
 variable "value" {
   description = "Specifies the value of the Key Vault Secret."
   type        = string
-  sensitive   = true
 }
 
 variable "key_vault_id" {
