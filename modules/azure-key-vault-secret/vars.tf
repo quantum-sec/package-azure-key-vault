@@ -3,9 +3,10 @@ variable "name" {
   type        = string
 }
 
-variable "secret_value" {
+variable "value" {
   description = "Specifies the value of the Key Vault Secret."
   type        = string
+  sensitive   = true
 }
 
 variable "key_vault_id" {
