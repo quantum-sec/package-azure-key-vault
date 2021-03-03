@@ -37,3 +37,8 @@ variable "storage_permissions" {
   type        = set(string)
   default     = []
 }
+
+variable "tenant_id" {
+  description = "The tenant ID in which the principals being attached to this policy exist."
+  type        = string
+}
