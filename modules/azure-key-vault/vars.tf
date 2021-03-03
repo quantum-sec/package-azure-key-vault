@@ -67,12 +67,6 @@ variable "purge_protection_enabled" {
   default     = false
 }
 
-variable "soft_delete_enabled" {
-  description = "Whether or not soft delete is enabled for this key vault."
-  type        = bool
-  default     = false
-}
-
 variable "tags" {
   description = "A mapping of tags to assign to this resource."
   type        = map(string)
