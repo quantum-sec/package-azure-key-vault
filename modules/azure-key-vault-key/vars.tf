@@ -17,7 +17,7 @@ variable "key_type" {
 variable "key_size" {
   description = "The size of key in bytes required to be created in key vault."
   type        = number
-  default     = 1024
+  default     = 2048
 }
 
 variable "key_opts" {
