@@ -15,4 +15,7 @@ resource "azurerm_key_vault_key" "key" {
   not_before_date = var.not_before_date
   expiration_date = var.expiration_date
   tags            = var.tags
+  lifecycle {
+    ignore_changes = [key_opts, name]
+  }
 }
