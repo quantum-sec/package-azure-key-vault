@@ -22,7 +22,7 @@ variable "key_size" {
 
 variable "key_opts" {
   description = "A list of operations that are required to be performed by key."
-  type        = set(string)
+  type        = list(string)
   default     = []
 }
 
