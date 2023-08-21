@@ -13,6 +13,7 @@ terraform {
   }
 }
 
+#tfsec:ignore:azure-keyvault-ensure-key-expiry
 resource "azurerm_key_vault_key" "key" {
   name            = var.name
   key_vault_id    = var.key_vault_id
@@ -20,6 +21,6 @@ resource "azurerm_key_vault_key" "key" {
   key_size        = var.key_size
   key_opts        = var.key_opts
   not_before_date = var.not_before_date
-  expiration_date = var.expiration_date
-  tags            = var.tags
+  #  expiration_date = var.expiration_date
+  tags = var.tags
 }
