@@ -3,9 +3,17 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 terraform {
-  required_version = ">= 0.12"
+  required_version = ">= 1.2"
+
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 3.0"
+    }
+  }
 }
 
+#tfsec:ignore:azure-keyvault-content-type-for-secret
 resource "azurerm_key_vault_secret" "secret" {
   name            = var.name
   value           = var.value

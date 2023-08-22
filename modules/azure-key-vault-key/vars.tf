@@ -32,11 +32,11 @@ variable "not_before_date" {
   default     = null
 }
 
-variable "expiration_date" {
-  description = "Secret not usable after the provided UTC datetime (as an RFC 3339 string)."
-  type        = string
-  default     = null
-}
+#variable "expiration_date" {
+#  description = "Secret not usable after the provided UTC datetime (as an RFC 3339 string)."
+#  type        = string
+#  default     = null
+#}
 
 variable "tags" {
   description = "A mapping of tags to assign to this resource."

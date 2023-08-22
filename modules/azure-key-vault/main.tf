@@ -3,11 +3,19 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 terraform {
-  required_version = ">= 0.12"
+  required_version = ">= 1.2"
+
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 3.0"
+    }
+  }
 }
 
 data "azurerm_client_config" "current" {}
 
+#tfsec:ignore:azure-keyvault-no-purge
 resource "azurerm_key_vault" "key_vault" {
   name                = var.name
   location            = var.location
